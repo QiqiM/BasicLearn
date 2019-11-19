@@ -7,15 +7,13 @@ function ListNode(element) {
 // LinkList class
 function LinkList() {
     this.head = new ListNode('head'); //头节点
-    this.find = find;               //查找节点
-    this.insert = insert;           //插入节点
-    this.remove = remove;           //删除节点
-    this.findPrev = findPrev;       //查找前一个节点
-    this.display = display;         //显示链表
 }
 
+
+let pro = LinkList.prototype
+
 //查找节点
-function find(item) {
+pro.find = function (item) {
     var currNode = this.head
     while (currNode.element !== item) {
         currNode = currNode.next
@@ -24,7 +22,7 @@ function find(item) {
 }
 
 //插入节点(尾插法)
-function insert(newElement, item) {
+pro.insert = function (newElement, item) {
     var newNode = new ListNode(newElement)
     var currNode = this.find(item)
     newNode.next = currNode.next
@@ -32,7 +30,7 @@ function insert(newElement, item) {
 }
 
 //删除节点
-function remove(item) {
+pro.remove = function (item) {
     var prevNode = this.findPrev(item)
     var currNode = this.find(item)
     if (prevNode.next !== null) {
@@ -43,7 +41,7 @@ function remove(item) {
 }
 
 //查找前一个节点
-function findPrev(item) {
+pro.findPrev = function (item) {
     var currNode = this.head
     while (currNode.next !== null && currNode.next.element !== item) {
         currNode = currNode.next
@@ -52,7 +50,7 @@ function findPrev(item) {
 }
 
 //显示链表
-function display() {
+pro.display = function () {
     var currNode = this.head
     while (currNode.next !== null) {
         currNode = currNode.next
@@ -60,22 +58,22 @@ function display() {
     }
 }
 
-var list1 = new LinkList()
-list1.insert(2, 'head')
-list1.insert(4, 2)
-list1.insert(3, 4)
-list1.display()
+// var list1 = new LinkList()
+// list1.insert(2, 'head')
+// list1.insert(4, 2)
+// list1.insert(3, 4)
+// list1.display()
 
-var list2 = new LinkList()
-list2.insert(5, 'head')
-list2.insert(6, 5)
-list2.insert(4, 6)
-list2.display()
+// var list2 = new LinkList()
+// list2.insert(5, 'head')
+// list2.insert(6, 5)
+// list2.insert(4, 6)
+// list2.display()
 
-
-let addTwoNumbers = function(l1, l2) {
+// 静态方法
+LinkList.addTwoNumbers = function(l1, l2) {
     let p1 = l1.head.next
-    console.log(l1)
+    // console.log(l1)
     let p2 = l2.head.next
     let carry = 0
     const dummy = new ListNode()
@@ -99,15 +97,17 @@ let addTwoNumbers = function(l1, l2) {
             p2 = p2.next
         }
         pointer = pointer.next
-        console.log(`point=============${pointer.element}`)
-        console.log(`dummy=============${dummy.next.element}`)
+        // console.log(`point=============${pointer.element}`)
+        // console.log(`dummy=============${dummy.next.element}`)
     }
 
-    console.log(dummy.next)
-    return dummy.next  
+    // console.log(dummy.next)
+    return dummy.next
 };
 
-let result = addTwoNumbers(list1,list2)
-console.log(result.element)
-console.log(result.next.element)
-console.log(result.next.next.element)
+module.exports = LinkList
+
+// let result = addTwoNumbers(list1, list2)
+// console.log(result.element)
+// console.log(result.next.element)
+// console.log(result.next.next.element)
