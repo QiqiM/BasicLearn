@@ -39,4 +39,5 @@ let lengthOfLongestSubstring = function(s) {
 
 let testStr = "abcabcbb"
 let len = lengthOfLongestSubstring(testStr)
+
 console.log(len)
