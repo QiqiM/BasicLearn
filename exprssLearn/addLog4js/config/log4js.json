@@ -1,0 +1,53 @@
+{
+    "replaceConsole": true,
+    "appenders": {
+        "app": {
+            "type": "dateFile",
+            "filename": "logs/appLog/app",
+            "encoding": "utf-8",
+            "layout": {
+                "type": "basic"
+            },
+            "pattern": "yyyy-MM-dd.log",
+            "keepFileExt": true,
+            "alwaysIncludePattern": true
+        },
+        "gm": {
+            "type": "dateFile",
+            "filename": "logs/gmLog/gm",
+            "encoding": "utf-8",
+            "layout": {
+                "type": "basic"
+            },
+            "pattern": "yyyy-MM-dd.log",
+            "keepFileExt": true,
+            "alwaysIncludePattern": true
+        },
+        "console": {
+            "type": "console"
+        }
+    },
+    "categories": {
+        "default": {
+            "appenders": [
+                "app",
+                "console"
+            ],
+            "level": "info"
+        },
+        "gm": {
+            "appenders": [
+                "gm",
+                "console"
+            ],
+            "level":"info"
+        },
+        "app": {
+            "appenders": [
+                "app",
+                "console"
+            ],
+            "level":"info"
+        }
+    }
+}
