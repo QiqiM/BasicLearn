@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, 'Microsoft Yahei', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #7e8793;
+}
+
+.home-header {
+    background: url('../images/home-bg.png') no-repeat;
+    background-size: 100% auto;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.home-header>img {
+    width: 73%;
+    margin: 2rem;
+    /*  正常 1rem = 16px*/
+}
+
+.home-header form {
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 2.2rem;
+    border-radius: 2.2rem;
+}
+
+.home-header form input {
+    width: 75%;
+    /* 此操作去除input外边框*/
+    outline: none;
+    border: 0px;
+}
+
+.home-header form button {
+    font-size: 0.9rem;
+    color: #5bd4c7;
+    border: none;
+    background: none;
+}
+
+.home-categories {
+    padding: 0 1em;
+}
+
+.home-categories dl {
+    border-bottom: 1px solid #f5f8f9;
+    padding-bottom: 1rem;
+    padding-top: 0.4rem;
+}
+
+.home-categories dt {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4rem;
+}
+
+.home-categories dt img {
+    height: 3rem;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.home-categories dt .sub-name {
+    font-weight: 1000;
+    color: #000000;
+    font-size: 0.95rem;
+}
+
+.home-categories dd {
+    /* 对冲下面 a标签的margin*/
+    margin: 0 -0.4rem;
+}
+
+.home-categories dd .tag {
+    text-decoration: none;
+    background: #f5f8f9;
+    color: #7e8793;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border-radius: 2rem;
+    margin: 0.2rem 0.4rem;
+    font-size: 0.8rem;
+}
+
+.home-footer {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 0.75rem;
+}
+
+.home-footer p {
+    margin: 0.2rem 0;
+}
+
+.download-bar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(0,#22dccf, #19c7c6);
+}
+
+.download-bar a{ 
+    position: relative;
+    display: flex;
+    height: 3.5rem;
+    text-decoration: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.download-bar .logo-text{
+    width: 70%;
+}
+
+.download-bar .logo-text img{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 0.3rem;
+}
+
+.download-bar a .logo-text{
+    padding-left: 1.2rem;
+}
+
+.download-bar a .logo-text p {
+    display: inline-block;
+    vertical-align: 0.3rem;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+    color: whitesmoke;
+}
+
+
+.download-bar a span{
+    background-color: #fff;
+    color: #5dd5ca;
+    line-height: 2rem;
+    width: 5.2rem;
+    text-align:center;
+    border-radius: 2rem;
+    margin-right: 1rem;
+}
