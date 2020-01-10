@@ -6,6 +6,21 @@ body {
     color: #7e8793;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+.padded {
+    padding: 1rem;
+}
+
+.btn {
+    border: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+}
+
 .home-header {
     background: url('../images/home-bg.png') no-repeat;
     background-size: 100% auto;
@@ -100,10 +115,10 @@ body {
     position: fixed;
     bottom: 0;
     right: 0;
-    background: linear-gradient(0,#22dccf, #19c7c6);
+    background: linear-gradient(0, #22dccf, #19c7c6);
 }
 
-.download-bar a{ 
+.download-bar a {
     position: relative;
     display: flex;
     height: 3.5rem;
@@ -112,17 +127,17 @@ body {
     align-items: center;
 }
 
-.download-bar .logo-text{
+.download-bar .logo-text {
     width: 70%;
 }
 
-.download-bar .logo-text img{
+.download-bar .logo-text img {
     width: 2.5rem;
     height: 2.5rem;
     margin-top: 0.3rem;
 }
 
-.download-bar a .logo-text{
+.download-bar a .logo-text {
     padding-left: 1.2rem;
 }
 
@@ -134,34 +149,35 @@ body {
     color: whitesmoke;
 }
 
-
-.download-bar a span{
+.download-bar a span {
     background-color: #fff;
     color: #5dd5ca;
     line-height: 2rem;
     width: 5.2rem;
-    text-align:center;
+    text-align: center;
     border-radius: 2rem;
     margin-right: 1rem;
 }
 
+
 /* list page */
-.flex{
+
+.flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.list-header{
+.list-header {
     padding: 0.8rem 1rem;
 }
 
-.list-header form{
+.list-header form {
     width: 100%;
 }
 
-.list-header form .inner{
-    width:100%;
+.list-header form .inner {
+    width: 100%;
     background: #f5f8f9;
     margin: 0 1rem;
     line-height: 1.7rem;
@@ -169,15 +185,15 @@ body {
     padding: 0 1rem;
 }
 
-.list-header form .inner input{
-    width:90%;
+.list-header form .inner input {
+    width: 90%;
     background: transparent;
     border: none;
     outline: none;
     color: #8b96a6;
 }
 
-.list-header form button{
+.list-header form button {
     border: none;
     background: none;
     font-size: 0.9rem;
@@ -186,33 +202,34 @@ body {
     padding: 0;
 }
 
-.fliter{
+.fliter {
     padding: 0.5rem 1rem;
     border: 1px solid #f5f8f9;
 }
 
-.fliter dd{
+.fliter dd {
     display: none;
 }
 
-.fliter dl, .fliter dd{
+.fliter dl,
+.fliter dd {
     margin: 0;
 }
 
-.fliter dt{
+.fliter dt {
     font-size: 0.85rem;
 }
 
-.fliter .active dt{
-    color:#333;
+.fliter .active dt {
+    color: #333;
 }
 
-.fliter dt::after{
+.fliter dt::after {
     content: '';
     display: inline-block;
     width: 4px;
     height: 4px;
-    border:  1px solid #999;
+    border: 1px solid #999;
     border-style: solid none none solid;
     transform: rotate(225deg);
     transform-origin: 2px 1px;
@@ -220,13 +237,13 @@ body {
     transition: all 0.3s;
 }
 
-.fliter .active dt::after{
+.fliter .active dt::after {
     transform: rotate(45deg);
 }
 
-.fliter .active dd{
+.fliter .active dd {
     display: block;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -234,13 +251,13 @@ body {
     left: 0;
 }
 
-.fliter .active dd ul{
+.fliter .active dd ul {
     margin: 0;
     padding: 0;
     background: #fff;
 }
 
-.fliter .active dd li{
+.fliter .active dd li {
     line-height: 3.5rem;
     text-indent: 1rem;
     list-style: none;
@@ -252,12 +269,12 @@ body {
     color: #333;
 }
 
-.job-list{
+.job-list {
     margin: 0;
     padding: 0;
 }
 
-.job-item{
+.job-item {
     margin: 1rem;
     padding-bottom: 1rem;
     color: #7e8793;
@@ -265,36 +282,145 @@ body {
     border-bottom: 1px solid #f5f8f9;
 }
 
-.job-item > img{
+.job-item>img {
     height: 3.5rem;
     border-radius: 0.3rem;
 }
 
-.job-list .text{
+.job-list .text {
     width: 100%;
     margin-left: 1rem;
 }
 
-.job-item .salary{
+.job-item .salary {
     font-size: 1.2rem;
     color: #fc6c38;
 }
 
-.job-item .title{
+.job-item .title {
     color: #333;
     font-size: 0.9rem;
 }
 
-.job-item .company{
+.job-item .company {
     color: #333;
     font-size: 0.8rem;
     margin: 0.2rem 0;
 }
 
-.job-list .props{
+.job-list .props {
     font-size: 0.8rem;
 }
 
-.job-list .props span{
+.job-list .props span {
     margin-right: 0.5rem;
+}
+
+
+/* detail */
+
+.top-bar img {
+    height: 1rem;
+}
+
+.top-bar form {
+    width: 40%;
+    border: 1px solid #5bd4c7;
+    border-radius: 2rem;
+}
+
+.top-bar form input {
+    border: none;
+    background: none;
+    line-height: 1.5rem;
+    width: 80%;
+    padding: 0 0.5rem;
+    color: #aaa;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.top-bar form button {
+    border: none;
+    background: url('../images/icons.png') no-repeat top center;
+    background-size: 100% auto;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+}
+
+.job-info {
+    background: #62d5c8;
+    color: #fff;
+}
+
+.job-info .title {
+    font-size: 1.2rem;
+}
+
+.jon-info .props {
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+}
+
+.job-info .props .items {
+    margin: 0.4rem 0;
+}
+
+.job-info .props .items i {
+    display: inline-block;
+    width: 1px;
+    height: 0.8rem;
+    background: #fff;
+    margin: 0rem 0.5rem;
+}
+
+.job-info .tags span {
+    border: 1px solid #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+}
+
+.user-info {
+    background: #eefbf9;
+}
+
+.user-info img {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 3.5rem;
+}
+
+.user-info>button {
+    background: #62d5c8;
+    color: #fff;
+    flex-shrink: 0;
+    /* button 不要缩小*/
+}
+
+.user-info .name {
+    color: #333;
+}
+
+.user-info .name .like {
+    color: #333;
+    font-size: 0.8rem;
+    color: #fb7042;
+}
+
+.user-info .name .like img {
+    width: 12px;
+    height: 12px;
+}
+
+.user-info .desc {
+    color: #aaa;
+    font-size: 0.7rem;
+    margin-top: 1rem;
+}
+
+.user-info .info {
+    width: 40%;
+    margin: 0 1rem;
 }
