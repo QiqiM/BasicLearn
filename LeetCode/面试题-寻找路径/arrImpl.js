@@ -30,10 +30,12 @@ class Solution {
             return position - 6;    
     }
 
-    find_next_node(position, step) {       
+    find_next_node(position, step) {  
+        if (position > 33 || position < 0 || Math.abs(step) > 6 || Math.abs(step) < 0) {
+            return;
+        }     
         let list = this.list_0;
-        if (position === 19 || position === 25 ||
-            (position >= 26 && position <= 30)) {
+        if (position === 19 || (position >= 25 && position <= 30)) {
             list = this.list_1;        
         }        
         let index = this.find_index(position);        
