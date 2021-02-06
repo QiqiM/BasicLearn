@@ -436,3 +436,7 @@ Employee Details for Employee Id: 1
 
 [How to Easily use GRPC and Protocol Buffers with NodeJS](https://adityasridhar.com/posts/how-to-easily-use-grpc-and-protocol-buffers-with-nodejs )
 
+[关于GRPC Streams in NodeJS参考作者原文](https://adityasridhar.com/posts/how-to-effectively-use-grpc-streams-in-nodejs)
+
+[我的示例源码地址](https://github.com/QiqiM/BasicLearn/tree/master/GRPC )
+
