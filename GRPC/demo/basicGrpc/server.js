@@ -1,12 +1,12 @@
 // 自己定义的proto文件
-const PROTO_PATH = __dirname + '/proto/employee.proto';
+const PROTO_PATH = __dirname + '/../proto/employee.proto';
 
 // grpc需要用到的第三方包
 const grpc = require('grpc');
 const protoLoader = require('@grpc/proto-loader');
 const _ = require('lodash');
 
-let { employees } = require('./data.js');
+let { employees } = require('../data.js');
 
 // 接下来，我们需要加载.proto文件。这是使用protoLoader库的loadSync方法完成的。
 let packageDefinition = protoLoader.loadSync(
