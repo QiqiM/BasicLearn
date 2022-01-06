@@ -1,2 +1,2 @@
 # BasicLearn
-Learn to plant a tree
+Learn to plant a tree.
